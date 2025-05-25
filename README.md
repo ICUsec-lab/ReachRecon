@@ -1,57 +1,36 @@
-=========================
-🔎 ReachRecon - README
-=========================
+# 🔎 ReachRecon
 
-ReachRecon is a fast Python tool for organizing your pentest by checking which targets are live.
+[![Python](https://img.shields.io/badge/Python-3.7%2B-blue?logo=python)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Issues](https://img.shields.io/github/issues/ICUsec-lab/ReachRecon)](https://github.com/ICUsec-lab/ReachRecon/issues)
 
-🛠️ What it does:
------------------
-    ✔️ Checks which subdomains are up (e.g., admin.example.com)
-    ✔️ Checks which web URLs are reachable (e.g., http://admin.example.com)
-    🔁 Converts subdomain lists to full web URLs and back
-    ⚡ Uses multithreading to make it FAST
-    🚫 Skips dead targets to keep your results CLEAN and USEFUL
+> **ReachRecon** is a blazing-fast Python tool to organize your pentest by checking which targets are live.
 
-🎯 Why use it:
---------------
-    During recon, you collect hundreds of subdomains or URLs.
-    But not all of them are alive — and scanning dead ones wastes time.
+---
 
-    ReachRecon filters live targets, helping you:
-        ✅ Focus only on valid attack surface
-        ✅ Organize your recon for better exploitation
-        ✅ Chain with tools like ffuf, nuclei, httpx, etc.
+## 🚀 Features
 
-📦 How to run:
---------------
-Check live subdomains:
-    python3 ReachRecon.py -s -f subs.txt
+- **Live Subdomain Checker:** Quickly find which subdomains are up (e.g., `admin.example.com`).
+- **Live URL Checker:** Validate which web URLs are reachable (e.g., `http://admin.example.com`).
+- **Smart Conversion:** Convert subdomain lists to full web URLs and back.
+- **Multithreaded:** Super-fast results thanks to multithreading.
+- **Clean Output:** Skips dead targets to keep your results clean and actionable.
 
-Check live full web URLs:
-    python3 ReachRecon.py -w -f urls.txt
+---
 
-Convert subdomains to web URLs:
-    python3 ReachRecon.py -cw -f subs.txt
+## 🎯 Why Use ReachRecon?
 
-Convert web URLs to subdomains:
-    python3 ReachRecon.py -cs -f urls.txt
+During recon, you may collect hundreds of subdomains or URLs—but not all are alive. Scanning dead ones wastes time and resources.
 
-👨‍💻 Built by ICUSec – Ethical Hackers on a mission to dominate the recon game 👑
+**ReachRecon helps you:**
+- Focus only on valid attack surfaces.
+- Organize recon data for better exploitation.
+- Easily chain results with tools like `ffuf`, `nuclei`, `httpx`, etc.
 
-📌 Pro tip:
-------------
-Use ReachRecon after tools like:
-    - subfinder
-    - assetfinder
-    - amass
+---
 
-Then feed the live results into your fuzzing or scanning tools.
+## 📦 Usage
 
-Example:
-    subfinder -d example.com | tee subs.txt
-    python3 ReachRecon.py -s -f subs.txt > live_subs.txt
-
-Then fuzz:
-    ffuf -u http://FUZZ.example.com -w live_subs.txt
-
-⚠️ For authorized testing only. Stay ethical.
+### Check live subdomains
+```bash
+python3 ReachRecon.py -s -f subs.txt
