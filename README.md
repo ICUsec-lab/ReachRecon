@@ -35,7 +35,7 @@ Convert subdomains to web URLs:
 Convert web URLs to subdomains:
     python3 ReachRecon.py -cs -f urls.txt
 
-👨‍💻 Built by ICUSec – Ethical Hacker in training on a mission to be king of hackers 👑
+👨‍💻 Built by Neftali – Ethical Hacker in training on a mission to be king of hackers 👑
 
 📌 Pro tip:
 ------------
