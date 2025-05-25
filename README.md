@@ -20,17 +20,18 @@
 
 ## 🎯 Why Use ReachRecon?
 
-During recon, you may collect hundreds of subdomains or URLs—but not all are alive. Scanning dead ones wastes time and resources.
+During recon, you may collect hundreds of subdomains or URLs—but not all are alive.
+Scanning dead ones wastes time and resources.
 
 **ReachRecon helps you:**
-- Focus only on valid attack surfaces.
-- Organize recon data for better exploitation.
-- Easily chain results with tools like `ffuf`, `nuclei`, `httpx`, etc.
+- ✅ Focus only on valid attack surfaces.
+- ✅ Organize recon data for better exploitation.
+- ✅ Easily chain results with tools like `ffuf`, `nuclei`, `httpx`, etc.
 
 ---
 
 ## 📦 Usage
 
-### Check live subdomains
+### ✅ Check live subdomains
 ```bash
 python3 ReachRecon.py -s -f subs.txt
